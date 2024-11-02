@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contrato de Compra</title>
+  <style>
+    /* Estilos generales */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+    
+    .container {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 40px;
+      max-width: 700px;
+      width: 100%;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Encabezado */
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      color: #003366;
+      margin: 0;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #003366;
+    }
+
+    /* Estilo para las secciones */
+    .section-title {
+      font-size: 1.2em;
+      color: #555;
+      margin-top: 20px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    p, li {
+      font-size: 1em;
+      color: #333;
+      margin: 10px 0;
+    }
+
+    /* Lista ordenada */
+    ol {
+      text-align: left;
+      font-size: 1em;
+      padding-left: 20px;
+      margin: 10px 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Estilo para etiquetas de datos importantes */
+    .label {
+      font-weight: bold;
+      color: #003366;
+    }
+
+    /* Footer y firma */
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+    }
+
+    .signature-section {
+      margin-top: 40px;
+      text-align: right;
+    }
+
+    .signature-line {
+      border-top: 1px solid #333;
+      width: 200px;
+      margin-top: 50px;
+      text-align: center;
+    }
+    
+    /* Fecha y firma */
+    .date, .signature {
+      margin-top: 20px;
+      text-align: left;
+      font-size: 1em;
+      color: #333;
+    }
+
+    /* Separador */
+    hr {
+      border: 0;
+      height: 1px;
+      background: #ddd;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <hr>
+    <h1>Contrato de Compra</h1>
+    <hr>
+    <p class="section-title">Datos del Comprador</p>
+    <p>Yo, <span class="label">{{ name }}</span>, firmo este documento para formalizar la compra de la propiedad especificada.</p>
+    
+    <p class="section-title">Detalles de la Propiedad</p>
+    <ol>
+      <li><span class="label">Nombre:</span> {{ item1 }}</li>
+      <li><span class="label">Apellido:</span> {{ item2 }}</li>
+      <li><span class="label">Dirección:</span> {{ item3 }}</li>
+      <li><span class="label">Teléfono:</span> {{ item4 }}</li>
+    </ol>
+    
+    <div class="date">
+      <p><span class="label">Fecha de firma:</span> {{ date }}</p>
+    </div>
+    
+    <div class="signature-section">
+      <p class="signature"><span class="label">Firmado por:</span> {{ name }}</p>
+      <div class="signature-line">Firma</div>
+    </div>
+
+    <div class="footer">
+      <p>Este contrato es válido y vinculante bajo las leyes locales aplicables.</p>
+    </div>
+  </div>
+</body>
+</html>
+
